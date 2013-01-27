@@ -25,7 +25,7 @@ namespace Ping
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmAdd add = new frmAdd(printers);
+            frmAdd add = new frmAdd(printers, lbYazicilar);
             add.ShowDialog();
         }
 
@@ -89,6 +89,14 @@ namespace Ping
             notifyIcon1.BalloonTipText = text;
             notifyIcon1.BalloonTipTitle = "Yazıcıya ulaşılamadı.";
             notifyIcon1.ShowBalloonTip(1000);
+        }
+
+        public void RefreshPrinters()
+        {
+            foreach (var item in printers)
+            {
+                lbYazicilar.Items.Add(String.Format("{0}\t{1}", item.Name, item.IPAddress));
+            }
         }
     }
 }

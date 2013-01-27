@@ -13,11 +13,13 @@ namespace Ping
     public partial class frmAdd : Form
     {
         public List<Printer> printers { get; set; }
+        public ListBox list { get; set; }
 
-        public frmAdd(List<Printer> printers)
+        public frmAdd(List<Printer> printers, ListBox list)
         {
             InitializeComponent();
             this.printers = printers;
+            this.list = list;
 
             foreach (var item in printers)
             {
@@ -49,7 +51,10 @@ namespace Ping
                         IPAddress = txtIpAddress.Text
                     });
 
-                    lbPrinters.Items.Add(String.Format("{0}\t{1}", txtName.Text, txtIpAddress.Text));
+                    string printerText = String.Format("{0}\t{1}", txtName.Text, txtIpAddress.Text);
+
+                    lbPrinters.Items.Add(printerText);
+                    list.Items.Add(String.Format("{0} ({1})", txtName.Text, txtIpAddress.Text));
                 }
                 else
                     MessageBox.Show("Yazıcı daha önceden listeye eklenmiş.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -36,15 +36,18 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbYazicilar = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbHatalar
             // 
             this.lbHatalar.FormattingEnabled = true;
-            this.lbHatalar.Location = new System.Drawing.Point(12, 42);
+            this.lbHatalar.Location = new System.Drawing.Point(170, 68);
             this.lbHatalar.Name = "lbHatalar";
-            this.lbHatalar.Size = new System.Drawing.Size(531, 264);
+            this.lbHatalar.Size = new System.Drawing.Size(373, 238);
             this.lbHatalar.TabIndex = 0;
             // 
             // button1
@@ -89,11 +92,40 @@
             this.toolStripMenuItem1.Text = "Çıkış";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // lbYazicilar
+            // 
+            this.lbYazicilar.FormattingEnabled = true;
+            this.lbYazicilar.Location = new System.Drawing.Point(13, 67);
+            this.lbYazicilar.Name = "lbYazicilar";
+            this.lbYazicilar.Size = new System.Drawing.Size(151, 238);
+            this.lbYazicilar.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Yazıcılar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(167, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Hatalar";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 318);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbYazicilar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbHatalar);
@@ -104,6 +136,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -115,6 +148,9 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ListBox lbYazicilar;
     }
 }
 
